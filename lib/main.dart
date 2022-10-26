@@ -47,6 +47,21 @@ class AppBarLeading extends StatelessWidget {
 }
 
 // TODO: AppBarActionsShare
+class AppBarActionsShare extends StatelessWidget {
+  const AppBarActionsShare({Key? key}) : super(key: key);
+  @override
+  Widget build(BuildContext context) {
+    return IconButton(
+        icon: const Icon(
+          Icons.share,
+        ),
+        onPressed: () {
+          const snackBar =
+              SnackBar(content: Text('You selected the Action: Share'));
+          ScaffoldMessenger.of(context).showSnackBar(snackBar);
+        });
+  }
+}
 
 // TODO: Enable Drawer
 class MyDrawerWidget extends StatelessWidget {
@@ -138,7 +153,7 @@ class MyDetails extends StatelessWidget {
             ),
             title: Text(title, style: const TextStyle(color: Colors.grey)),
             actions: const [
-              // AppBarActionsShare(),
+              AppBarActionsShare(),
             ],
             // TODO: Add TabBar
             bottom: const TabBar(
