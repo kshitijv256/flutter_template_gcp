@@ -125,6 +125,79 @@ class MyDetails extends StatelessWidget {
   const MyDetails({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      backgroundColor: Colors.black,
+      body: DefaultTabController(
+        length: 4,
+        child: Scaffold(
+          appBar: AppBar(
+            backgroundColor: Colors.transparent,
+            elevation: 0,
+            iconTheme: const IconThemeData(
+              color: Colors.grey, //change your color here
+            ),
+            title: Text(title, style: const TextStyle(color: Colors.grey)),
+            actions: const [
+              // AppBarActionsShare(),
+            ],
+            // TODO: Add TabBar
+            bottom: const TabBar(
+              indicatorColor: Colors.black,
+              tabs: [
+                Tab(
+                  icon: Icon(Icons.home, color: Colors.grey),
+                  child: Text('Overview',
+                      style: TextStyle(
+                          color: Colors.grey, fontWeight: FontWeight.bold)),
+                ),
+                Tab(
+                  icon: Icon(Icons.favorite, color: Colors.grey),
+                  child: Text('Docs',
+                      style: TextStyle(
+                          color: Colors.grey, fontWeight: FontWeight.bold)),
+                ),
+                Tab(
+                  icon: Icon(Icons.list, color: Colors.grey),
+                  child: Text('Information',
+                      style: TextStyle(
+                          color: Colors.grey, fontWeight: FontWeight.bold)),
+                ),
+                Tab(
+                  icon: Icon(Icons.info, color: Colors.grey),
+                  child: Text('Other',
+                      style: TextStyle(
+                          color: Colors.grey, fontWeight: FontWeight.bold)),
+                ),
+              ],
+            ),
+          ),
+          // TODO: Add TabBarView
+          body: const TabBarView(
+            children: [
+              SizedBox(
+                child: Center(
+                  child: Text('Tab Page 1'),
+                ),
+              ),
+              SizedBox(
+                child: Center(
+                  child: Text('Tab Page 2'),
+                ),
+              ),
+              SizedBox(
+                child: Center(
+                  child: Text('Tab Page 3'),
+                ),
+              ),
+              SizedBox(
+                child: Center(
+                  child: Text('Tab Page 4'),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
   }
 }
