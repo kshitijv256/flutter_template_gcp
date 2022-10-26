@@ -28,7 +28,23 @@ class ProductHomeWidget extends StatelessWidget {
   const ProductHomeWidget(this.title, {Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      backgroundColor: Colors.white,
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        iconTheme: const IconThemeData(
+          color: Colors.grey, //change your color here
+        ),
+        actions: const [
+          AppBarActionsShare(),
+        ],
+        title: Text(title, style: const TextStyle(color: Colors.black)),
+      ),
+      body: ProductListView(),
+      // TODO: Add Drawer
+      drawer: const MyDrawerWidget(),
+    );
   }
 }
 
