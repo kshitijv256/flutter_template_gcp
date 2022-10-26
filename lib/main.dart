@@ -2,7 +2,25 @@ import 'package:flutter/material.dart';
 
 // TODO: Embedded List
 class GoogleProducts {
-  final List<String> items = [];
+  final List<String> items = [
+    'Cloud Functions',
+    'App Engine',
+    'Kubernetes Engine',
+    'Compute Engine',
+    'Bare Metal',
+    'Pre-emtible VMs',
+    'Shielded VMs',
+    'Sole-tenet Nodes',
+    'VMWare Engine',
+    'Cloud Firestore',
+    'Cloud Storage',
+    'Persistent Disk',
+    'Local SSD',
+    'Cloud Bigtable',
+    'Cloud Firestore',
+    'Cloud Memorystore',
+    'Cloud Spanner',
+  ];
 }
 
 void main() {
